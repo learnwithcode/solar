@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, ChangeEvent } from "react";
 
-const cities = [
+const cities: string[] = [
   "Delhi",
   "Mumbai",
   "Bengaluru",
@@ -20,15 +20,15 @@ const cities = [
   "Nagpur",
 ];
 
-export default function SearchBar() {
-  const [query, setQuery] = useState("");
+export default function SearchBar(): JSX.Element {
+  const [query, setQuery] = useState<string>("");
   const [results, setResults] = useState<string[]>([]);
 
-  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleSearch = (e: ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setQuery(value);
 
-    if (value.length > 0) {
+    if (value.trim().length > 0) {
       const filtered = cities.filter((city) =>
         city.toLowerCase().includes(value.toLowerCase())
       );
@@ -36,6 +36,11 @@ export default function SearchBar() {
     } else {
       setResults([]);
     }
+  };
+
+  const handleSelect = (city: string) => {
+    setQuery(city);
+    setResults([]);
   };
 
   return (
@@ -51,17 +56,13 @@ export default function SearchBar() {
           placeholder="Enter your city..."
           className="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-500"
         />
-
         {results.length > 0 && (
-          <ul className="bg-white border border-gray-200 rounded-lg mt-2 shadow">
-            {results.map((city, index) => (
+          <ul className="bg-white border border-gray-200 rounded-lg mt-2 shadow max-h-40 overflow-y-auto">
+            {results.map((city: string, index: number) => (
               <li
                 key={index}
                 className="p-2 hover:bg-orange-100 cursor-pointer rounded"
-                onClick={() => {
-                  setQuery(city);
-                  setResults([]);
-                }}
+                onClick={() => handleSelect(city)}
               >
                 {city}
               </li>
