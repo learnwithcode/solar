@@ -1,19 +1,6 @@
 "use client";
 import SearchBar from "./SearchBar";
 
-const cities = [
-  "Delhi",
-  "Mumbai",
-  "Bengaluru",
-  "Chennai",
-  "Kolkata",
-  "Hyderabad",
-  "Pune",
-  "Jaipur",
-  "Lucknow",
-  "Ahmedabad",
-  "Chandigarh",
-];
 
 export default function Home() {
 
