@@ -1,6 +1,4 @@
 "use client";
-
-import { useState } from "react";
 import SearchBar from "./SearchBar";
 
 const cities = [
