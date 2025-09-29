@@ -2,7 +2,7 @@
 "use client";
 import { useState } from "react";
 import BottomNav from "./components/BottomNav";
-import WhatsAppFab from "./components/WhatsAppFab";
+// import WhatsAppFab from "./components/WhatsAppFab";
 import Home from "./components/Home";
 
 type Lead = {
