@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className="p-1 space-y-8">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-orange-500 to-yellow-400 text-white text-center p-5 rounded-b-3xl shadow-md">
+      <section className="bg-gradient-to-r from-orange-500 to-yellow-400 text-white text-center p-4 rounded-b-3xl shadow-md">
         <h1 className="text-4xl font-bold leading-snug">Go Solar & Save Big 🌞</h1>
         <p className="mt-3 text-lg max-w-xl mx-auto">
           Power your <strong>home, shop, or office</strong> with clean energy.
