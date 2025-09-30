@@ -1,9 +1,14 @@
 // app/components/Home.tsx
 "use client";
 
+import SearchBar from "./SearchBar";
+
 export default function Home() {
   return (
     <div className="p-1 space-y-8">
+      {/* SearchBar  */}
+      <SearchBar/>
+
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-orange-500 to-yellow-400 text-white text-center p-4 rounded-b-3xl shadow-md">
         <h1 className="text-4xl font-bold leading-snug">Go Solar & Save Big 🌞</h1>
@@ -39,7 +44,7 @@ export default function Home() {
 
       {/* Expertise & Installations */}
       <section className="p-4 space-y-4">
-        <h2 className="text-2xl font-semibold mb-3 text-center">Our Expertise & Installations</h2>
+        <h2 className="text-2xl font-semibold mb-3 text-left">Our Expertise & Installations</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {/* Types of Installation */}
