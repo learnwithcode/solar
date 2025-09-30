@@ -43,8 +43,9 @@ export default function SearchBar({ onSelectCity }: Props) {
     <div className="relative max-w-xl mx-auto mb-6">
       {/* Headline */}
       <h2 className="text-xl font-semibold mb-2 text-left">
-       Check Solas In Your City
+       Check Solar In Your City
       </h2>
+      
 
       <input
         type="text"
