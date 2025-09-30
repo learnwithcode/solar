@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, ChangeEvent } from "react";
+import { useState } from "react";
 
-const cities: string[] = [
+const cities = [
   "Delhi",
   "Mumbai",
   "Bengaluru",
@@ -20,15 +20,15 @@ const cities: string[] = [
   "Nagpur",
 ];
 
-export default function SearchBar(): JSX.Element {
-  const [query, setQuery] = useState<string>("");
+export default function SearchBar() {
+  const [query, setQuery] = useState("");
   const [results, setResults] = useState<string[]>([]);
 
-  const handleSearch = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setQuery(value);
 
-    if (value.trim().length > 0) {
+    if (value.length > 0) {
       const filtered = cities.filter((city) =>
         city.toLowerCase().includes(value.toLowerCase())
       );
@@ -36,11 +36,6 @@ export default function SearchBar(): JSX.Element {
     } else {
       setResults([]);
     }
-  };
-
-  const handleSelect = (city: string) => {
-    setQuery(city);
-    setResults([]);
   };
 
   return (
@@ -56,13 +51,17 @@ export default function SearchBar(): JSX.Element {
           placeholder="Enter your city..."
           className="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-500"
         />
+
         {results.length > 0 && (
-          <ul className="bg-white border border-gray-200 rounded-lg mt-2 shadow max-h-40 overflow-y-auto">
-            {results.map((city: string, index: number) => (
+          <ul className="bg-white border border-gray-200 rounded-lg mt-2 shadow">
+            {results.map((city, index) => (
               <li
                 key={index}
                 className="p-2 hover:bg-orange-100 cursor-pointer rounded"
-                onClick={() => handleSelect(city)}
+                onClick={() => {
+                  setQuery(city);
+                  setResults([]);
+                }}
               >
                 {city}
               </li>
