@@ -8,55 +8,8 @@ import Home from "./components/Home";
 // central type for tab values
 export type TabType = "home" | "subsidy" | "finance" | "contact";
 
-type Lead = {
-  name?: string;
-  phone?: string;
-  city?: string;
-  bill?: string;
-  prefillText?: string;
-};
-
-declare global {
-  interface Window {
-    gtag?: (...args: unknown[]) => void;
-  }
-}
-
 export default function Page() {
   const [activeTab, setActiveTab] = useState<TabType>("home");
-
-  async function submitLeadAndOpenWhatsApp(lead: Lead) {
-    try {
-      await fetch("/api/lead", {
-        method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify(lead),
-      });
-    } catch (err) {
-      console.error("lead post failed:", err);
-    }
-
-    try {
-      const sendTo = process.env.NEXT_PUBLIC_AW_CONV;
-      if (typeof window !== "undefined" && window.gtag && sendTo) {
-        window.gtag("event", "conversion", {
-          send_to: sendTo,
-          value: 1.0,
-          currency: "INR",
-        });
-      }
-    } catch {
-      /* ignore */
-    }
-
-    const number = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "";
-    const text = encodeURIComponent(
-      lead.prefillText ||
-        "Hi, I want a rooftop solar quote. My city: ___, monthly bill: ___"
-    );
-    const url = `https://wa.me/${number}?text=${text}`;
-    if (typeof window !== "undefined") window.open(url, "_blank");
-  }
 
   return (
     <div className="min-h-screen flex flex-col pb-28 bg-white">
@@ -113,16 +66,11 @@ export default function Page() {
               Call or WhatsApp for a free site assessment.
             </p>
             <div className="space-y-2">
-              <button
-                onClick={() =>
-                  submitLeadAndOpenWhatsApp({
-                    prefillText:
-                      "Hello, I want a site visit. My city: ____ , best time: ____",
-                  })
-                }
-                className="w-full py-3 rounded-lg bg-green-600 text-white font-medium"
-              >
+              <button className="w-full py-3 rounded-lg bg-green-600 text-white font-medium">
                 Chat on WhatsApp
+              </button>
+              <button className="w-full py-3 rounded-lg bg-blue-600 text-white font-medium">
+                Call Us
               </button>
             </div>
           </section>

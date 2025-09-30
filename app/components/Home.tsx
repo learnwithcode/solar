@@ -1,21 +1,12 @@
+// app/components/Home.tsx
 "use client";
-import SearchBar from "./SearchBar";
-
 
 export default function Home() {
-
-
   return (
     <div className="p-4 space-y-8">
-      {/* Search Section  */}
-
-      <SearchBar/>
-
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-orange-500 to-yellow-400 text-white text-center p-10 rounded-b-3xl shadow-md">
-        <h1 className="text-4xl font-bold leading-snug">
-          Go Solar & Save Big 🌞
-        </h1>
+        <h1 className="text-4xl font-bold leading-snug">Go Solar & Save Big 🌞</h1>
         <p className="mt-3 text-lg max-w-xl mx-auto">
           Power your <strong>home, shop, or office</strong> with clean energy.
           Get subsidy under <strong>PM Surya Ghar Yojna</strong> & cut your
@@ -24,18 +15,10 @@ export default function Home() {
 
         {/* Quick Highlights */}
         <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto text-sm">
-          <div className="bg-white/20 p-3 rounded-lg">
-            ✅ Govt Subsidy up to ₹78,000
-          </div>
-          <div className="bg-white/20 p-3 rounded-lg">
-            ✅ ROI in 4–5 Years
-          </div>
-          <div className="bg-white/20 p-3 rounded-lg">
-            ✅ 25+ Years Panel Life
-          </div>
-          <div className="bg-white/20 p-3 rounded-lg">
-            ✅ No Cost EMI Options
-          </div>
+          <div className="bg-white/20 p-3 rounded-lg">✅ Govt Subsidy up to ₹78,000</div>
+          <div className="bg-white/20 p-3 rounded-lg">✅ ROI in 4–5 Years</div>
+          <div className="bg-white/20 p-3 rounded-lg">✅ 25+ Years Panel Life</div>
+          <div className="bg-white/20 p-3 rounded-lg">✅ No Cost EMI Options</div>
         </div>
 
         {/* Call to Action */}
@@ -54,45 +37,43 @@ export default function Home() {
         </p>
       </section>
 
-      {/* Types of Installation */}
-<section className="p-4 space-y-4">
-  <h2 className="text-2xl font-semibold mb-3 text-center">Our Expertise & Installations</h2>
+      {/* Expertise & Installations */}
+      <section className="p-4 space-y-4">
+        <h2 className="text-2xl font-semibold mb-3 text-center">Our Expertise & Installations</h2>
 
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-    {/* Types of Installation */}
-    <div className="p-4 border rounded-lg shadow-sm">
-      <h3 className="font-semibold text-lg mb-2">Types of Installation</h3>
-      <ul className="space-y-1 text-gray-700">
-        <li>✅ On-Grid – Connected to electricity grid</li>
-        <li>✅ Off-Grid – Battery backup included</li>
-        <li>✅ Hybrid – Grid + Battery combination</li>
-      </ul>
-    </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {/* Types of Installation */}
+          <div className="p-4 border rounded-lg shadow-sm">
+            <h3 className="font-semibold text-lg mb-2">Types of Installation</h3>
+            <ul className="space-y-1 text-gray-700">
+              <li>✅ On-Grid – Connected to electricity grid</li>
+              <li>✅ Off-Grid – Battery backup included</li>
+              <li>✅ Hybrid – Grid + Battery combination</li>
+            </ul>
+          </div>
 
-    {/* Projects Completed */}
-    <div className="p-4 border rounded-lg shadow-sm text-center">
-      <h3 className="font-semibold text-lg mb-2">Projects Completed</h3>
-      <p className="text-3xl font-bold text-orange-600">+350</p>
-      <p className="text-gray-600">Happy customers across India</p>
-    </div>
+          {/* Projects Completed */}
+          <div className="p-4 border rounded-lg shadow-sm text-center">
+            <h3 className="font-semibold text-lg mb-2">Projects Completed</h3>
+            <p className="text-3xl font-bold text-orange-600">+350</p>
+            <p className="text-gray-600">Happy customers across India</p>
+          </div>
 
+          {/* Years of Experience */}
+          <div className="p-4 border rounded-lg shadow-sm text-center">
+            <h3 className="font-semibold text-lg mb-2">Years of Experience</h3>
+            <p className="text-3xl font-bold text-orange-600">12</p>
+            <p className="text-gray-600">Years in solar installation</p>
+          </div>
+        </div>
 
-    {/* Years of Experience */}
-    <div className="p-4 border rounded-lg shadow-sm text-center">
-      <h3 className="font-semibold text-lg mb-2">Years of Experience</h3>
-      <p className="text-3xl font-bold text-orange-600">12</p>
-      <p className="text-gray-600">Years in solar installation</p>
-    </div>
-  </div>
-
-  {/* Optional: Add panels installed metric */}
-  <div className="mt-4 p-4 border rounded-lg shadow-sm text-center bg-yellow-50">
-    <h3 className="font-semibold text-lg mb-2">Solar Panels Installed</h3>
-    <p className="text-3xl font-bold text-orange-600">+1200 kW</p>
-    <p className="text-gray-700">Cumulative capacity for homes & businesses</p>
-  </div>
-</section>
-
+        {/* Panels Installed */}
+        <div className="mt-4 p-4 border rounded-lg shadow-sm text-center bg-yellow-50">
+          <h3 className="font-semibold text-lg mb-2">Solar Panels Installed</h3>
+          <p className="text-3xl font-bold text-orange-600">+1200 kW</p>
+          <p className="text-gray-700">Cumulative capacity for homes & businesses</p>
+        </div>
+      </section>
 
       {/* Pricing Section */}
       <section>
