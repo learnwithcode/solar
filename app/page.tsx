@@ -2,10 +2,10 @@
 "use client";
 
 import { useState } from "react";
-import BottomNav from "./components/BottomNav";
 import Home from "./components/Home";
+import BottomNav from "./components/BottomNav";
 
-// central type for tab values
+// Central type for tab values
 export type TabType = "home" | "subsidy" | "finance" | "contact";
 
 export default function Page() {
@@ -19,13 +19,10 @@ export default function Page() {
 
         {/* SUBSIDY TAB */}
         {activeTab === "subsidy" && (
-          <section>
-            <h2 className="text-xl font-semibold mb-2">
-              Subsidy & Govt Schemes
-            </h2>
+          <section className="p-4">
+            <h2 className="text-xl font-semibold mb-2">Subsidy & Govt Schemes</h2>
             <p className="text-gray-600 mb-3">
-              Surya Ghar and state subsidies — eligibility, typical %
-              subsidy, and steps to apply.
+              Surya Ghar and state subsidies — eligibility, typical % subsidy, and steps to apply.
             </p>
             <ol className="list-decimal pl-5 text-gray-700">
               <li>Site inspection → estimate</li>
@@ -45,32 +42,27 @@ export default function Page() {
 
         {/* FINANCE TAB */}
         {activeTab === "finance" && (
-          <section>
+          <section className="p-4">
             <h2 className="text-xl font-semibold mb-2">Finance & Payback</h2>
             <p className="text-gray-600 mb-3">
-              Use EMI plans, zero-upfront options and view estimated payback
-              time.
+              Use EMI plans, zero-upfront options and view estimated payback time.
             </p>
             <div className="p-3 bg-gray-50 rounded border">
-              <strong>Example:</strong> 3 kW system — payback 3–5 years
-              (depending on subsidy & consumption).
+              <strong>Example:</strong> 3 kW system — payback 3–5 years (depending on subsidy & consumption).
             </div>
           </section>
         )}
 
         {/* CONTACT TAB */}
         {activeTab === "contact" && (
-          <section>
+          <section className="p-4">
             <h2 className="text-xl font-semibold mb-2">Contact</h2>
-            <p className="text-gray-600 mb-3">
-              Call or WhatsApp for a free site assessment.
-            </p>
+            <p className="text-gray-600 mb-3">Call or WhatsApp for a free site assessment.</p>
             <div className="space-y-2">
-              <button className="w-full py-3 rounded-lg bg-green-600 text-white font-medium">
+              <button
+                className="w-full py-3 rounded-lg bg-green-600 text-white font-medium"
+              >
                 Chat on WhatsApp
-              </button>
-              <button className="w-full py-3 rounded-lg bg-blue-600 text-white font-medium">
-                Call Us
               </button>
             </div>
           </section>
