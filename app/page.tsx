@@ -1,7 +1,7 @@
 // app/page.tsx
 "use client";
 
-import { useState, Dispatch, SetStateAction } from "react";
+import { useState } from "react";
 import BottomNav from "./components/BottomNav";
 import Home from "./components/Home";
 
@@ -15,6 +15,12 @@ type Lead = {
   bill?: string;
   prefillText?: string;
 };
+
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
 
 export default function Page() {
   const [activeTab, setActiveTab] = useState<TabType>("home");
@@ -32,8 +38,8 @@ export default function Page() {
 
     try {
       const sendTo = process.env.NEXT_PUBLIC_AW_CONV;
-      if (typeof window !== "undefined" && (window as any).gtag && sendTo) {
-        (window as any).gtag("event", "conversion", {
+      if (typeof window !== "undefined" && window.gtag && sendTo) {
+        window.gtag("event", "conversion", {
           send_to: sendTo,
           value: 1.0,
           currency: "INR",
