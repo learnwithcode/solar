@@ -3,7 +3,7 @@
 
 export default function Home() {
   return (
-    <div className="p-4 space-y-8">
+    <div className="p-1 space-y-8">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-orange-500 to-yellow-400 text-white text-center p-10 rounded-b-3xl shadow-md">
         <h1 className="text-4xl font-bold leading-snug">Go Solar & Save Big 🌞</h1>
@@ -23,10 +23,10 @@ export default function Home() {
 
         {/* Call to Action */}
         <div className="mt-6 flex justify-center gap-4">
-          <button className="bg-white text-orange-600 px-6 py-3 rounded-lg font-semibold shadow hover:bg-gray-100">
+          <button className="bg-white text-orange-600 px-6 py-2 rounded-lg font-semibold shadow hover:bg-gray-100">
             Get Free Quote
           </button>
-          <button className="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold shadow hover:bg-green-700">
+          <button className="bg-green-600 text-white px-6 py-2 rounded-lg font-semibold shadow hover:bg-green-700">
             Chat on WhatsApp
           </button>
         </div>
