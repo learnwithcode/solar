@@ -234,6 +234,60 @@ export default function Home() {
           <li>✅ 24x7 Customer Support via WhatsApp</li>
         </ul>
       </section>
+      {/* Footer Section */}
+<footer className="bg-gray-900 text-gray-300 py-10 mt-10">
+  <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+    
+    {/* Company Info */}
+    <div>
+      <h3 className="text-xl font-bold text-white mb-3">SolarOne Energy</h3>
+      <p className="text-sm leading-relaxed">
+        Empowering homes & businesses with clean, affordable solar energy.
+        Start saving today under the <strong>PM Surya Ghar Muft Bijli Yojna</strong>.
+      </p>
+    </div>
+
+    {/* Quick Links */}
+    <div>
+      <h4 className="text-lg font-semibold text-white mb-3">Quick Links</h4>
+      <ul className="space-y-2 text-sm">
+        <li><a href="#" className="hover:text-orange-400">Home</a></li>
+        <li><a href="#" className="hover:text-orange-400">Subsidy Info</a></li>
+        <li><a href="#" className="hover:text-orange-400">Finance Options</a></li>
+        <li><a href="#" className="hover:text-orange-400">Contact Us</a></li>
+      </ul>
+    </div>
+
+    {/* Contact Info */}
+    <div>
+      <h4 className="text-lg font-semibold text-white mb-3">Contact Us</h4>
+      <ul className="space-y-2 text-sm">
+        <li>📍 45, Green Energy Tower, Sector 63, Noida, UP</li>
+        <li>📞 +91 98765 43210</li>
+        <li>📧 support@solarone.in</li>
+        <li>🕒 Mon–Sat: 9 AM – 7 PM</li>
+      </ul>
+    </div>
+
+    {/* Social Media */}
+    <div>
+      <h4 className="text-lg font-semibold text-white mb-3">Follow Us</h4>
+      <div className="flex space-x-4">
+        <a href="#" className="hover:text-orange-400">🌐</a>
+        <a href="#" className="hover:text-orange-400">📘</a>
+        <a href="#" className="hover:text-orange-400">📸</a>
+        <a href="#" className="hover:text-orange-400">🐦</a>
+      </div>
+      <p className="text-sm mt-3">#GoSolar #SaveThePlanet</p>
+    </div>
+  </div>
+
+  {/* Copyright */}
+  <div className="border-t border-gray-700 mt-10 pt-4 text-center text-sm text-gray-500">
+    © {new Date().getFullYear()} SolarOne Energy. All rights reserved. | Designed with ☀️
+  </div>
+</footer>
+
     </div>
   );
 }
