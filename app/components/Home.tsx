@@ -56,7 +56,7 @@ export default function Home() {
       <SearchBar />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-orange-500 to-yellow-400 text-white text-center p-10 rounded-b-3xl shadow-md">
+      <section className="bg-gradient-to-r from-orange-500 to-yellow-400 text-white text-center p-2 rounded-b-3xl shadow-md">
         <h1 className="text-4xl font-bold leading-snug">
           Switch to Solar, Save Smart 🌞
         </h1>
