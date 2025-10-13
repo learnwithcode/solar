@@ -90,6 +90,7 @@ export default function Home() {
         </p>
       </section>
 
+
       {/* Enhanced Types of Installation */}
     <section className="py-10 px-5 bg-white max-w-3xl mx-auto">
       <h2 className="text-2xl font-semibold text-center mb-6">
