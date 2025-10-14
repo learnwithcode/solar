@@ -4,8 +4,8 @@ import { Phone, Sun, MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function BottomNav() {
-  const phoneNumber = "tel:+919999999999"; // Replace with your business number
-  const whatsappLink = "https://wa.me/919999999999"; // Replace with your WhatsApp number
+  const phoneNumber = "tel:+919625619508"; // Replace with your business number
+  const whatsappLink = "https://wa.me/919625619508"; // Replace with your WhatsApp number
 
   return (
     <div className="fixed bottom-0 left-0 right-0 bg-white shadow-lg border-t border-gray-200 flex justify-between items-center px-8 py-3 z-50">

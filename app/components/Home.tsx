@@ -9,9 +9,9 @@ const installations = [
     description:
       "Best for homes connected to the main power grid. Save bills and earn via net metering.",
     variants: [
-      { kw: "3 KW", price: "₹1,55,000" },
-      { kw: "5 KW", price: "₹2,35,000" },
-      { kw: "10 KW", price: "₹4,50,000" },
+      { kw: "3 KW", price: "On Quote" },
+      { kw: "5 KW", price: "On Quote" },
+      { kw: "10 KW", price: "On Quote" },
     ],
   },
   {
@@ -19,9 +19,9 @@ const installations = [
     description:
       "Ideal for remote areas or backup setups. Works independently of government supply.",
     variants: [
-      { kw: "3 KW", price: "₹1,80,000" },
-      { kw: "5 KW", price: "₹2,80,000" },
-      { kw: "10 KW", price: "₹5,25,000" },
+      { kw: "3 KW", price: "On Quote" },
+      { kw: "5 KW", price: "On Quote" },
+      { kw: "10 KW", price: "On Quote" },
     ],
   },
   {
@@ -29,9 +29,9 @@ const installations = [
     description:
       "A mix of On-grid and Off-grid for the best of both worlds — backup + savings.",
     variants: [
-      { kw: "3 KW", price: "₹1,95,000" },
-      { kw: "5 KW", price: "₹2,95,000" },
-      { kw: "10 KW", price: "₹5,50,000" },
+      { kw: "3 KW", price: "On Quote" },
+      { kw: "5 KW", price: "On Quote" },
+      { kw: "10 KW", price: "On Quote" },
     ],
   },
 ];
@@ -70,19 +70,27 @@ export default function Home() {
         {/* Highlights */}
         <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto text-sm">
           <div className="bg-white/20 p-3 rounded-lg">✅ Govt Subsidy ₹78,000+</div>
-          <div className="bg-white/20 p-3 rounded-lg">✅ ROI in 4–5 Years</div>
+          <div className="bg-white/20 p-3 rounded-lg">✅ ROI in 2–3 Years</div>
           <div className="bg-white/20 p-3 rounded-lg">✅ 25+ Years Panel Life</div>
           <div className="bg-white/20 p-3 rounded-lg">✅ No Cost EMI Available</div>
         </div>
 
         {/* CTA */}
         <div className="mt-6 flex justify-center gap-4">
-          <button className="bg-white text-orange-600 px-6 py-3 rounded-lg font-semibold shadow hover:bg-gray-100">
+          {/* Get Quote Button */}
+          {/* <button className="bg-white text-orange-600 px-6 py-3 rounded-lg font-semibold shadow hover:bg-gray-100">
             Get Free Quote
-          </button>
-          <button className="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold shadow hover:bg-green-700">
+          </button> */}
+
+          {/* WhatsApp Chat Button */}
+          <a
+            href="https://wa.me/919625619508?text=Hi%2C%20I%20want%20a%20free%20solar%20quote!"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold shadow hover:bg-green-700 flex items-center justify-center"
+          >
             Chat on WhatsApp
-          </button>
+          </a>
         </div>
 
         <p className="mt-4 text-sm opacity-90">
@@ -140,7 +148,7 @@ export default function Home() {
             onClick={() =>
               window.open(
                 `https://wa.me/${
-                  process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "919999999999"
+                  process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "919625619508"
                 }?text=Hi, I'm interested in ${selectedKW} ${currentInstall.type}`,
                 "_blank"
               )
@@ -163,13 +171,13 @@ export default function Home() {
       {/* Subsidy Info */}
       <section className="bg-green-100 p-4 rounded-lg">
         <h2 className="text-2xl font-semibold mb-2">
-          PM Surya Ghar Yojna Subsidy
+          PM Surya Ghar Muft Bijli Yojna Subsidy
         </h2>
         <p className="text-lg">
           Get up to <strong>₹78,000 subsidy</strong> directly in your account.
         </p>
         <p className="text-gray-700 mt-1">
-          Final cost after subsidy: <strong>₹1,22,000</strong>
+           Applicable on <strong>On Grid Sytem</strong> for Resident Only
         </p>
       </section>
 
@@ -202,7 +210,7 @@ export default function Home() {
           </div>
           <div className="p-4 bg-green-100 rounded-lg text-center shadow-sm">
             <p className="text-sm text-gray-700">After Solar</p>
-            <p className="text-xl font-bold">₹500/month</p>
+            <p className="text-xl font-bold">₹0/month</p>
           </div>
         </div>
       </section>
@@ -263,8 +271,8 @@ export default function Home() {
     <div>
       <h4 className="text-lg font-semibold text-white mb-3">Contact Us</h4>
       <ul className="space-y-2 text-sm">
-        <li>📍 45, Green Energy Tower, Sector 63, Noida, UP</li>
-        <li>📞 +91 98765 43210</li>
+        <li>📍 45, CASA Green Energy, Sector 63, Noida, UP</li>
+        <li>📞 +91 96256 19508</li>
         <li>📧 support@solarone.in</li>
         <li>🕒 Mon–Sat: 9 AM – 7 PM</li>
       </ul>
