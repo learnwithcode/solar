@@ -271,9 +271,9 @@ export default function Home() {
     <div>
       <h4 className="text-lg font-semibold text-white mb-3">Contact Us</h4>
       <ul className="space-y-2 text-sm">
-        <li>📍 45, CASA Green Energy, Sector 63, Noida, UP</li>
+        <li>📍 Oppo : S, S Plaza, Shop No 2, J.S Plaza, Maharaja Suraj Mal Road, Sec 16 B, Chipiyana Buzurg, Greater Noida, Uttar Pradesh 201009</li>
         <li>📞 +91 96256 19508</li>
-        <li>📧 support@solarone.in</li>
+        <li>📧 shortwe4@gmail.com</li>
         <li>🕒 Mon–Sat: 9 AM – 7 PM</li>
       </ul>
     </div>
